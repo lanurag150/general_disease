@@ -69,69 +69,59 @@
           
             <div class="w3-card-4" style="width: 550px;">
               <div class="w3-container w3-black">
-                <h2 style="color:white;">Heart Disease Analysis</h2>
+                <h2 style="color:white;">GENERAL DISEASE PREDICTOR</h2>
               </div>
               <form class="w3-container" action="{{ url_for('predict')}}"method="post">
                 <br>
                 <p>      
-                <label class="w3-text-black"><b>Age</b></label>
-                <input class="w3-input w3-border w3-sand" name="first" type="text">     </p>
+                <label class="w3-text-black"><b>TEMPERATURE</b></label>
+                <input class="w3-input w3-border w3-sand" name="temp" type="text">     </p>
                 <p>      
-                <label class="w3-text-black"><b>Resting Blood Pressure</b></label>
-                <input class="w3-input w3-border w3-sand" name="trestbps" type="text">
+                <label class="w3-text-black"><b>PULSE RATE</b></label>
+                <input class="w3-input w3-border w3-sand" name="pulserate" type="text">
                 </p>
-                <p>      
-                <label class="w3-text-black"><b>Cholestrol</b></label>
-                <input class="w3-input w3-border w3-sand" name="chol" type="text">     </p>
-                <p>      
-                <label class="w3-text-black"><b>thalach</b></label>
-                <input class="w3-input w3-border w3-sand" name="thalach" type="text">
-                </p>
-                <p>      
-                <label class="w3-text-black"><b>oldpeak</b></label>
-                <input class="w3-input w3-border w3-sand" name="oldpeak" type="text">
-                </p>
-                <p>
-                <label class="w3-text-black"><b>Gender</b></label>
-                <select class="w3-select w3-border w3-sand" name="sex" >
+		<p>      
+                <label class="w3-text-black"><b>L.A PAIN</b></label>
+                <select class="w3-input w3-border w3-sand" name="lapain" type="text">
                 <option value="" disabled selected>Select Option</option>
-                <option value="1">Male</option>
-                <option value="0">Female</option>
-                </select>
-                </p>
-                <p>
-                <label class="w3-text-black"><b>Chest Pain</b></label>
-                <select class="w3-select w3-border w3-sand" name="cp" >
-                <option value="" disabled selected>Select Option</option>
-                <option value="1">Type 1</option>
-                <option value="0">Type 2</option>
-                </select>
-                </p>
-                <p>
-                <label class="w3-text-black"><b>Fbs</b></label>
-                <select class="w3-select w3-border w3-sand" name="Fbs" >
-                <option value="" disabled selected>Select Option</option>
-                <option value="1">Type 1</option>
-                <option value="0">Type 2</option>
+                <option value="1">YES</option>
+                <option value="0">NO</option>
                 </select>
                 </p>
                 <p>      
-                <label class="w3-text-black"><b>Restg</b></label>
-                <input class="w3-input w3-border w3-sand" name="restg" type="text"></p>
+                <label class="w3-text-black"><b>U.A PAIN</b></label>
+                <select class="w3-input w3-border w3-sand" name="uapain" type="text">
+                <option value="" disabled selected>Select Option</option>
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+                </select>
+                </p>
+		<p>      
+                <label class="w3-text-black"><b>Vomiting Feeling</b></label>
+                <select class="w3-input w3-border w3-sand" name="vf" type="text">
+                <option value="" disabled selected>Select Option</option>
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+                </select>
+                </p>      
                 <p>      
-                <label class="w3-text-black"><b>Exang</b></label>
-                <input class="w3-input w3-border w3-sand" name="exang" type="text"></p>
+                <label class="w3-text-black"><b>Yellowish urine</b></label>
+                <select class="w3-input w3-border w3-sand" name="yurine" type="text">
+                <option value="" disabled selected>Select Option</option>
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+                </select>
+                </p>      
                 <p>      
-                <label class="w3-text-black"><b>Ca</b></label>
-                <input class="w3-input w3-border w3-sand" name="Ca" type="text"></p>
-                <p>      
-                <label class="w3-text-black"><b>Slope</b></label>
-                <input class="w3-input w3-border w3-sand" name="slope" type="text"></p>
-                <p>      
-                <label class="w3-text-black"><b>Thal</b></label>
-                <input class="w3-input w3-border w3-sand" name="thal" type="text"></p>
+                <label class="w3-text-black"><b>Indigestion</b></label>
+                <select class="w3-input w3-border w3-sand" name="indigestion" type="text">
+                <option value="" disabled selected>Select Option</option>
+                <option value="1">YES</option>
+                <option value="0">NO</option>
+                </select>
+                </p>      
                 <p>
-                <button type="submit"class="w3-btn w3-black">Analyse now</button></p>
+                <button type="submit"class="w3-btn w3-black">Predict now</button></p>
               </form>
             </div>
             </div>
@@ -171,8 +161,8 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">King's Palace 9(a), Kiit University, Patia, Bhubaneshwar,Odisha-751024</span></li>
-	                <li><a href="tel:+91 7735866609"><span class="icon icon-phone"></span><span class="text">+91 7735866609</span></a></li>
-	                <li><a href="mailto:piyushsinghpk21@yahoo.com"><span class="icon icon-envelope"></span><span class="text">piyushsinghpk21@yahoo.com</span></a></li>
+	                <li><a href="tel:+91 9798428466"><span class="icon icon-phone"></span><span class="text">+91 9798428466</span></a></li>
+	                <li><a href="mailto:ankitaditya02@gmail.com"><span class="icon icon-envelope"></span><span class="text">ankitaditya02@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
